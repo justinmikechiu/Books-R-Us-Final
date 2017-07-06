@@ -59,14 +59,25 @@
 				<div class="main-login main-center">
 				<h5>Sign Up for User Benefits </h5>
                 <hr>
-					<form class="" method="post" action="#">
+					<form action="Servlet" method="post">
 						
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Your Name</label>
-							<div class="cols-sm-10">
+						<label for="email" class="cols-sm-2 control-label">First Name</label>
+				
+c							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+									<input type="text" class="form-control" name="fname" id="name"  placeholder="Enter your First Name"/>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+						<label for="email" class="cols-sm-2 control-label">Last Name</label>
+						<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="lname" id="name"  placeholder="Enter your Last Name"/>
 								</div>
 							</div>
 						</div>
@@ -101,21 +112,11 @@
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-								</div>
-							</div>
-						</div>
-
 						<div class="form-group ">
-							<button type="button" id="button" class="btn btn-lg btn-block login-button">Register</a>
+							<button name="register" id="button" type ="submit" class="btn btn-lg btn-block login-button">Register</button>
 						</div>
-						
 					</form>
+					
 				</div>
 			</div>
 		</div>
