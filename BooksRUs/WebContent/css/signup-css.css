@@ -1,0 +1,86 @@
+/*
+/* Created by Filipe Pina
+ * Specific styles of signin, register, component
+ */
+/*
+ * General styles
+ */
+#playground-container {
+    height: 500px;
+    overflow: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+body, html{
+     height: 100%;
+ 	 font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+}
+
+p{
+    padding-top: 20px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+h5{
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial !important;
+    font-size: 20px !important;
+    text-align: center !important;
+}
+
+.main{
+ 	margin:20px 15px;
+}
+
+.form-group{
+	margin-bottom: 15px;
+    text-align: left;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial !important;
+}
+
+label{
+	margin-bottom: 15px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial !important;
+    color: gray;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+.cols-sm-2 {
+    text-align: left !important;
+}
+.form-control {
+    height: auto!important;
+    padding: 8px 12px !important;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial !important;
+}
+.input-group {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+}
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 400px;
+    padding: 10px 40px;
+
+}
+span.input-group-addon i {
+    color: rgb(255,127,0);
+    font-size: 17px;
+}
+
+.login-button{
+	margin-top: 5px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+}
+
+.login-register{
+	font-size: 11px;
+	text-align: center;
+}

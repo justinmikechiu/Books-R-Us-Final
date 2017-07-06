@@ -1,0 +1,10 @@
+.contact-section{
+    background-color: #dddddd;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+	padding: 25px 50px;
+    height: 400px;
+}
