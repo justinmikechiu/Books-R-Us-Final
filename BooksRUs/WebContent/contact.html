@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>General Bookstore</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" type="text/css" href="css/main2.css">
+         <link rel="stylesheet" type="text/css" href="css/footer.css">
+          <link rel="stylesheet" type="text/css" href="css/contact.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+        
+    </head>
+
+
+    <body>
+
+        <div class="mnav">
+            <ul>
+                <li class="home"><a href="home.html">HOME</a></li>
+                <li class="nav-search"><a href="search.html">SEARCH</a></li>
+                <li class="popular"><a href="popular.html">POPULAR</a></li>
+                <li class="contact"><a href="contact.html">CONTACT</a></li>
+                <li class="about-us"><a href="aboutus.html">ABOUT US</a></li>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">ACCOUNT </button>
+                    <div class="dropdown-content">
+                        <a href="profile.html"> Profile</a>
+                        <hr style="margin:0px; border-color:#d8d8d8">
+                        <a href="login.html"> Log In</a>
+                        <a href="signup.html"> Sign Up</a>
+                    </div>
+                </div>                        
+                
+                <span> | </span>  
+                <li class="cart"><a href="cart.html">CART <span class="badge">2</span></a></li>
+            </ul>
+        </div>
+ 
+        <div id="map" style="width:1000px;height:400px;background:yellow"></div>
+
+        <script>
+            function myMap() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(33.9458486, -83.37466230000001),
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+
+        <div class="contact-section"> 
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Company<span>logo</span></h3>
+				<p class="footer-links">
+					<a href="home.html">Home</a> ·
+					<a href="search.html">Search</a> ·
+					<a href="popular.html">Popular</a> ·
+					<a href="contact.html">Contact</a> ·
+					<a href="aboutus.html">About Us</a> ·
+					<a href="profile.html">Account</a>
+				</p>
+				<p class="footer-company-name">Books-R-Us &copy; 2017</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>200 D.W. Brooks Drive </span> Athens, Georgia</p>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@company.com</a></p>
+				</div>
+			</div>
+
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+				    <a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+		</footer>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyDFv6ETLlR2ljYw-_GV5zgsVCLftmhHlUM&callback=myMap"></script>
+
+
+    </body>
+</html>
