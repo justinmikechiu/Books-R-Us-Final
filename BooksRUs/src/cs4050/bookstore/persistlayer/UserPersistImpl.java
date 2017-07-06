@@ -1,22 +1,18 @@
-package cs4050.bookstore.persistlayer;
+package PersistLayer;
 
-import cs4050.bookstore.objectlayer.User;
-import cs4300.timebomb.persistlayer.DbAccessImpl;
-
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.ArrayList;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import ObjectLayer.User;
+import PersistLayer.DbAccessImpl;
 
 public class UserPersistImpl {
 	
 	public void insertUser(String firstName, String lastName, String email, String userName, String password, int seclevel) {
-		DbAccessImpl.create("INSERT INTO USER (fname, lname, email, userName, password, seclevel) VALUES ('" + firstName + "', '" 
-				+ lastName + "', '" + email + "', '" + userName + "', '" + password + "', '" + seclevel + "')");
+		String query= "INSERT INTO USER (fname, lname, email, userName, password, seclevel) VALUES ('" + firstName + "', '" 
+				+ lastName + "', '" + email + "', '" + userName + "', '" + password + "', '" + seclevel + "')";
 		
+		DbAccessImpl.create(query);
 		DbAccessImpl.disconnect();
 	} // insertUser
 	

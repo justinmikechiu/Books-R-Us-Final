@@ -1,14 +1,9 @@
-package cs4050.bookstore.persistlayer;
+package PersistLayer;
 
-import cs4050.bookstore.objectlayer.*;
+import ObjectLayer.*;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.ArrayList;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 public class BookPersistImpl {
 	public void insertBook(String title, String author, String publisher, int year, int stock, float price) {

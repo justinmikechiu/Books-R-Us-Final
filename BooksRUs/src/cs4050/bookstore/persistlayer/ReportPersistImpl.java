@@ -1,12 +1,12 @@
-package cs4050.bookstore.persistlayer;
+package PersistLayer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import cs4050.bookstore.objectlayer.BookSales;
-import cs4050.bookstore.objectlayer.PublisherSales;
-import cs4050.bookstore.objectlayer.DayReport;
+import ObjectLayer.BookSales;
+import ObjectLayer.PublisherSales;
+import ObjectLayer.DayReport;
 
 public class ReportPersistImpl {
 	//date format yyyy-mm-dd
@@ -31,7 +31,7 @@ public class ReportPersistImpl {
 		DayReport report = null;
 		try {
 			while (result.next()) {
-				report = new DayReport( result.getFloat(1), result.getFloat(2), result.getFloat(3), result.getFloat(4), result.getString(5));
+//				report = new DayReport( result.getFloat(1), result.getFloat(2), result.getFloat(3), result.getFloat(4), result.getString(5));
 			} // while
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -51,8 +51,8 @@ public class ReportPersistImpl {
 		ArrayList<BookSales> report = new ArrayList<BookSales>();
 		try {
 			while (result.next()) {
-				BookSales bookSales = new BookSales(result.getInt(1), result.getInt(2), result.getString(3));
-				report.add(bookSales);
+//				BookSales bookSales = new BookSales(result.getInt(1), result.getInt(2), result.getString(3));
+//				report.add(bookSales);
 			} // while
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -66,7 +66,7 @@ public class ReportPersistImpl {
 		BookSales report = null;
 		try {
 			while (result.next()) {
-				report = new BookSales(result.getInt(1), result.getInt(2), result.getString(3));
+//				report = new BookSales(result.getInt(1), result.getInt(2), result.getString(3));
 			} // while
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -80,8 +80,8 @@ public class ReportPersistImpl {
 		ArrayList<PublisherSales> report = new ArrayList<PublisherSales>();
 		try {
 			while (result.next()) {
-				PublisherSales publisherSales = new PublisherSales(result.getInt(1), result.getInt(2), result.getFloat(3));
-				report.add(publisherSales);
+//				PublisherSales publisherSales = new PublisherSales(result.getInt(1), result.getInt(2), result.getFloat(3));
+//				report.add(publisherSales);
 			} // while
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -96,7 +96,7 @@ public class ReportPersistImpl {
 		PublisherSales report = null;
 		try {
 			while (result.next()) {
-				report = new PublisherSales(result.getInt(1), result.getInt(2), result.getFloat(3));
+//				report = new PublisherSales(result.getInt(1), result.getInt(2), result.getFloat(3));
 			} // while
 		} catch (SQLException e) {
 			e.printStackTrace();

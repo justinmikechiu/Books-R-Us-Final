@@ -1,6 +1,6 @@
-package cs4050.bookstore.persistlayer;
+package PersistLayer;
 
-import cs4050.bookstore.objectlayer.*;
+import ObjectLayer.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package cs4050.bookstore.persistlayer;
+package PersistLayer;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
