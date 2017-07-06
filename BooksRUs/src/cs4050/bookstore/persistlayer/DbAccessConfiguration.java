@@ -1,4 +1,4 @@
-package Persistlayer;
+package cs4050.bookstore.persistlayer;
 
 public abstract class DbAccessConfiguration {
 	//change before submission
