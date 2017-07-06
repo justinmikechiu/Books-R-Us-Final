@@ -1,6 +1,7 @@
 package cs4050.bookstore.persistlayer;
 
 import cs4050.bookstore.objectlayer.User;
+import cs4300.timebomb.persistlayer.DbAccessImpl;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -19,6 +20,25 @@ public class UserPersistImpl {
 		DbAccessImpl.disconnect();
 	} // insertUser
 	
+	public void insertUser(User u) {
+		String firstName = u.getFirst();
+		String lastName = u.getLast();
+		String email = u.getEmail();
+		String userName = u.getUsername();
+		String password = u.getPassword();
+		int seclevel = u.getSeclevel();
+		
+		DbAccessImpl.create("INSERT INTO USER (fname, lname, email, userName, password, seclevel) VALUES ('" + firstName + "', '" 
+				+ lastName + "', '" + email + "', '" + userName + "', '" + password + "', '" + seclevel + "')");
+		
+		DbAccessImpl.disconnect();
+	} // insertUser
+	
+	public int deleteUser(int id){
+		String query = "DELETE USERS FROM USERS WHERE USERS.id = " + id;
+		return DbAccessImpl.delete(query);
+	} // deleteUser
+	
 	public User getUser(int userId) {
 		ResultSet result = DbAccessImpl.retrieve("SELECT fname, lname, email, username, password, seclevel, shipaddress, carsaved FROM user WHERE id = "+  userId +";");
 		User user = null;
@@ -32,6 +52,20 @@ public class UserPersistImpl {
 		DbAccessImpl.disconnect();
 		return user;
 	} // getUser
+	
+	public int getUserId(String username){
+		ResultSet result = DbAccessImpl.retrieve("SELECT id FROM user WHERE username = "+ username +";");
+		int id=0;
+		try {
+			while (result.next()) {
+				id = result.getInt(6);
+			} // while
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}  // try-catch
+		DbAccessImpl.disconnect();
+		return id;
+	}
 	
 	public void updateUsername(String username, int userId) {
 		DbAccessImpl.update("UPDATE user SET username = " + username + " WHERE id = " + userId + ";");
@@ -70,7 +104,26 @@ public class UserPersistImpl {
 		DbAccessImpl.disconnect();
 		return password;
 	}//getPassword
-
+	
+	public boolean authenticateUser(String userName, String password){
+		boolean authentic = false;
+		String query = 
+				"SELECT lname, fname FROM USERS WHERE userName = '"+userName+"' AND password = '"+password+"'";
+		ResultSet resultSet = DbAccessImpl.retrieve(query);
+		
+		try {
+			if(resultSet.next()){
+				authentic = true;
+			}
+			resultSet.close();
+		} catch (SQLException e){
+			e.printStackTrace();
+		} finally {
+			DbAccessImpl.disconnect();
+		} // try-catch
+		return authentic;
+	}
+	
 	public void updateEmail(String email, int userId) {
 		DbAccessImpl.update("UPDATE user SET email = '" + email + "' WHERE id = " + userId + ";");
 		DbAccessImpl.disconnect();
