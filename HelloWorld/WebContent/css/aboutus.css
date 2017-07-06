@@ -1,0 +1,136 @@
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+
+}
+
+/*    Carousel Fade Transition   */
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: -35px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: orange;
+  border: none;
+  padding-top:20px;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+img{
+    width: 256px;
+    height: auto;
+}
+
+hr.border1{
+    margin: 0px !important;
+}
+
+.mission-section{
+    background-color: #dddddd;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+	padding: 25px 50px;
+    height: 400px;
+}
+
+.mission-section>h4{
+    font-size: 35px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+
+}
+
+
+.mission-section>hr{
+    width: 60%;
+    border-top: 1.5px solid #fff;
+}
+
+.inner-mission>p{
+    font-size: 15px;
+}
+
+.inner-mission{
+    width: 100%;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+/*Offer section*/
+.mission-offer{
+    text-align: center;
+}
+
+.offer-icon{
+    display: inline-block !important;
+    text-align: center;
+    padding-right: 65px;
+    padding-left: 70px;
+    padding-top: 5px;
+}
+
+.offer-icon>p{
+    font-size: 20px !important;
+}
+
+.mission-offer p{
+    font-size:15px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", Helvetica,Arial;
+    color: #33383b;
+}
+
+.fa-truck, .fa-clock-o, .fa-thumbs-up{
+    font-size: 50px !important;
+    background-color:  #33383b;
+	color: #ffffff;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 7px 15px;
+    padding-top: 22px;
+	vertical-align: middle;
+}
+
+.fa-truck:hover,.fa-clock-o:hover, .fa-thumbs-up:hover {
+    background-color: orange;
+}
+
+.offer-icon>span{
+    font: normal 35px 'Cookie', cursive;
+
+}
