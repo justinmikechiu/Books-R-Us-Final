@@ -1,7 +1,5 @@
-package cs4050.bookstore.logiclayer;
+package LogicLayer;
 
-import cs4050.bookstore.persistlayer.UserPersistImpl;
-import cs4050.bookstore.objectlayer.User;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -9,6 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+
+import ObjectLayer.*;
+import PersistLayer.*;
 
 public class UserLogicImpl {
 	private UserPersistImpl userPersist = new UserPersistImpl();
