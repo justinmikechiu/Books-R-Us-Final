@@ -1,4 +1,4 @@
-package cs4050.bookstore.objectlayer;
+package ObjectLayer;
 
 public class PublisherSales {
 	private int publisher_id;

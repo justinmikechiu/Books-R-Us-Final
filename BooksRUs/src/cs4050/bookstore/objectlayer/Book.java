@@ -1,4 +1,4 @@
-package cs4050.bookstore.objectlayer;
+package ObjectLayer;
 
 import java.util.ArrayList;
 import java.util.List;

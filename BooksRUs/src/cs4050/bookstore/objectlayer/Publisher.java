@@ -1,4 +1,4 @@
-package cs4050.bookstore.objectlayer;
+package ObjectLayer;
 
 public class Publisher {
 	private User userinfo;// Publisher just user with special methods and functions 

@@ -1,4 +1,4 @@
-package cs4050.bookstore.objectlayer;
+package ObjectLayer;
 
 public class Genre {
 	private int book_id; //foreign key

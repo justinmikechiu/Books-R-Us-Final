@@ -1,4 +1,4 @@
-package cs4050.bookstore.objectlayer;
+package ObjectLayer;
 
 public class DayReport {
 	private double cashInTotal;//  mostly symbolic, I might be able to script something that "adds cash" to the store when a held 
@@ -8,46 +8,15 @@ public class DayReport {
 	private double cardOutTotal;// on Order to "purchase" books and online purchases will go to cardInTotal obviously 
 	
 	private double netTotal;
-
-	public double getCashInTotal() {
-		return cashInTotal;
-	}
-
-	public void setCashInTotal(double cashInTotal) {
-		this.cashInTotal = cashInTotal;
-	}
-
-	public double getCashOutTotal() {
-		return cashOutTotal;
-	}
-
-	public void setCashOutTotal(double cashOutTotal) {
-		this.cashOutTotal = cashOutTotal;
-	}
-
-	public double getCardInTotal() {
-		return cardInTotal;
-	}
-
-	public void setCardInTotal(double cardInTotal) {
-		this.cardInTotal = cardInTotal;
-	}
-
-	public double getCardOutTotal() {
-		return cardOutTotal;
-	}
-
-	public void setCardOutTotal(double cardOutTotal) {
-		this.cardOutTotal = cardOutTotal;
-	}
-
-	public double getNetTotal() {
-		return netTotal;
-	}
-
-	public void setNetTotal(double netTotal) {
-		this.netTotal = netTotal;
-	}
 	
-	
+
+public DayReport(double cashInTotal, double cashOutTotal, double cardInTotal, double cardOutTotal, double netTotal) {
+	super();
+	this.cashInTotal = cashInTotal;
+	this.cashOutTotal = cashOutTotal;
+	this.cardInTotal = cardInTotal;
+	this.cardOutTotal = cardOutTotal;
+	this.netTotal = netTotal;
+}
+
 }
