@@ -1,4 +1,4 @@
-package ObjectLayer;
+package cs4050.bookstore.objectlayer;
 
 public class Admin {
 	private User userinfo;// Admin just user with special methods and functions 

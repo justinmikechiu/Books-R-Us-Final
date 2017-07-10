@@ -1,4 +1,4 @@
-package BoundaryLayer;
+package cs4050.bookstore.boundarylayer;
 import java.io.IOException;
 import java.io.Writer;
 import java.sql.SQLException;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import LogicLayer.UserLogicImpl;
-import ObjectLayer.User;
+import cs4050.bookstore.logiclayer.*;
+import cs4050.bookstore.objectlayer.*;
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapperBuilder;
 import freemarker.template.SimpleHash;

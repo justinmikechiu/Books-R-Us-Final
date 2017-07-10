@@ -1,4 +1,4 @@
-package PersistLayer;
+package cs4050.bookstore.persistlayer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

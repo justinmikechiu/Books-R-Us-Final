@@ -1,4 +1,4 @@
-package ObjectLayer;
+package cs4050.bookstore.objectlayer;
 
 public class User {
 	private int id;

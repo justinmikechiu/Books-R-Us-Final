@@ -1,10 +1,10 @@
-package PersistLayer;
+package cs4050.bookstore.persistlayer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import ObjectLayer.User;
-import PersistLayer.DbAccessImpl;
+import cs4050.bookstore.objectlayer.*;
+import cs4050.bookstore.persistlayer.*;
 
 public class UserPersistImpl {
 	

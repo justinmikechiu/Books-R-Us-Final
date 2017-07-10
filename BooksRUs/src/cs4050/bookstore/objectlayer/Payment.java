@@ -1,4 +1,4 @@
-package ObjectLayer;
+package cs4050.bookstore.objectlayer;
 
 public class Payment {
 	private int userid;	

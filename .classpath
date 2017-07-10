@@ -3,5 +3,7 @@
 	<classpathentry kind="src" path="BooksRUs/src"/>
 	<classpathentry kind="lib" path="HelloWorld/WebContent/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/macbookpro/Downloads/wildfly-10.1.0.Final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.1_spec-1.0.0.Final.jar" sourcepath="/Users/macbookpro/.m2/repository/org/jboss/spec/javax/servlet/jboss-servlet-api_3.1_spec/1.0.0.Final/jboss-servlet-api_3.1_spec-1.0.0.Final-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/macbookpro/Documents/HelloWorld Git/HelloWorld/WebContent/WEB-INF/lib/freemarker.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

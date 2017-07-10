@@ -1,4 +1,4 @@
-package ObjectLayer;
+package cs4050.bookstore.objectlayer;
 
 public class DayReport {
 	private double cashInTotal;//  mostly symbolic, I might be able to script something that "adds cash" to the store when a held 
