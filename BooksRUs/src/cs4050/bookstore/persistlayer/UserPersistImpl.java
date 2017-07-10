@@ -9,26 +9,25 @@ import PersistLayer.DbAccessImpl;
 public class UserPersistImpl {
 	
 	public void insertUser(String firstName, String lastName, String email, String userName, String password, int seclevel) {
-		String query= "INSERT INTO USER (fname, lname, email, userName, password, seclevel) VALUES ('" + firstName + "', '" 
+		String query= "INSERT INTO USER (fname, lname, email, username, password, type) VALUES ('" + firstName + "', '" 
 				+ lastName + "', '" + email + "', '" + userName + "', '" + password + "', '" + seclevel + "')";
 		
 		DbAccessImpl.create(query);
 		DbAccessImpl.disconnect();
 	} // insertUser
 	
-	public void insertUser(User u) {
+	public int insertUser(User u) {
 		String firstName = u.getFirst();
 		String lastName = u.getLast();
 		String email = u.getEmail();
 		String userName = u.getUsername();
 		String password = u.getPassword();
-		int seclevel = u.getSeclevel();
+		int type = u.getSeclevel();
 		
-		DbAccessImpl.create("INSERT INTO USER (fname, lname, email, userName, password, seclevel) VALUES ('" + firstName + "', '" 
-				+ lastName + "', '" + email + "', '" + userName + "', '" + password + "', '" + seclevel + "')");
-		
-		DbAccessImpl.disconnect();
-	} // insertUser
+		int r = DbAccessImpl.create("INSERT INTO USER (fname, lname, email, username, password, type) VALUES ('" + firstName + "', '" 
+				+ lastName + "', '" + email + "', '" + userName + "', '" + password + "', '" + type + "')");
+		return r;
+			} // insertUser
 	
 	public int deleteUser(int id){
 		String query = "DELETE USERS FROM USERS WHERE USERS.id = " + id;
@@ -36,7 +35,7 @@ public class UserPersistImpl {
 	} // deleteUser
 	
 	public User getUser(int userId) {
-		ResultSet result = DbAccessImpl.retrieve("SELECT fname, lname, email, username, password, seclevel, shipaddress, carsaved FROM user WHERE id = "+  userId +";");
+		ResultSet result = DbAccessImpl.retrieve("SELECT fname, lname, email, username, password, type, shipaddress, carsaved FROM user WHERE id = "+  userId +";");
 		User user = null;
 		try {
 			while (result.next()) {
@@ -104,10 +103,11 @@ public class UserPersistImpl {
 	public boolean authenticateUser(String userName, String password){
 		boolean authentic = false;
 		String query = 
-				"SELECT lname, fname FROM USERS WHERE userName = '"+userName+"' AND password = '"+password+"'";
-		ResultSet resultSet = DbAccessImpl.retrieve(query);
+				"SELECT 1 FROM USER WHERE username = '"+userName+"' AND password = '"+password+"'";
+		ResultSet resultSet = null;
 		
-		try {
+		try{
+			resultSet = DbAccessImpl.retrieve(query);
 			if(resultSet.next()){
 				authentic = true;
 			}
@@ -119,6 +119,7 @@ public class UserPersistImpl {
 		} // try-catch
 		return authentic;
 	}
+
 	
 	public void updateEmail(String email, int userId) {
 		DbAccessImpl.update("UPDATE user SET email = '" + email + "' WHERE id = " + userId + ";");

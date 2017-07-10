@@ -56,10 +56,11 @@ public class DbAccessImpl  {
 	 * @return the result set
 	 */
 	public static ResultSet retrieve (String query) {
+		ResultSet result = null;
 		try {
-			con = connect();
-			pstmt = con.prepareStatement(query);
-			result = pstmt.executeQuery();
+			con = connect();	
+			Statement stmt = con.createStatement();
+			result = stmt.executeQuery(query);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} // try-catch
