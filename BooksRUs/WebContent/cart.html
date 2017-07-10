@@ -3,121 +3,164 @@
     <head>
       <title>General Bookstore</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" type="text/css" href="css/main2.css">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main2.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
         
     </head>
 
-
     <body>
-
-        <div class="mnav">
-            <ul>
-                <li class="home"><a href="home.html">HOME</a></li>
-                <li class="nav-search"><a href="search.html">SEARCH</a></li>
-                <li class="popular"><a href="popular.html">POPULAR</a></li>
-                <li class="contact"><a href="contact.html">CONTACT</a></li>
-                <li class="about-us"><a href="aboutus.html">ABOUT US</a></li>
-                
-                <div class="dropdown">
-                    <button class="dropbtn">ACCOUNT </button>
-                    <div class="dropdown-content">
-                        <a href="profile.html"> Profile</a>
-                        <hr style="margin:0px; border-color:#d8d8d8">
-                        <a href="login.html"> Log In</a>
-                        <a href="signup.html"> Sign Up</a>
-                    </div>
-                </div>                        
-                
-                <span> | </span>  
-                <li class="cart"><a href="cart.html">CART <span class="badge">2</span></a></li>
-            </ul>
-    </div>
+   	<!--header-->
+	<header id="header">
+		<div class="header_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href=""><i class="fa fa-newspaper-o"></i> NEWS</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="header-middle">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="shop-menu pull-left">
+							<ul class="nav navbar-nav">
+								<li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+								<li><a href="search.html"><i class="fa fa-search"></i> Search</a></li>
+								<li><a href="popular.html"><i class="fa fa-star"></i> Popular</a></li>
+								<li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+								<li><a href="aboutus.html"><i class="fa fa-info-circle"></i> About Us</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-sm-4">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="profile.html"><i class="fa fa-user"></i> Account</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
  
+    
+    <!-- Cart -->
     <div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th class="text-center">Price</th>
-                        <th class="text-center">Total</th>
-                        <th>Â </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="col-sm-8 col-md-6">
-                        <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
-                            </div>
-                        </div></td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
-                        </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
-                        <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-6">
-                        <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><a href="#">Product name</a></h4>
-                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
-                                <span>Status: </span><span class="text-warning"><strong>Out of Stock</strong></span>
-                            </div>
-                        </div></td>
-                        <td class="col-md-1" style="text-align: center">
-                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
-                        </td>
-                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
-                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
-                        <td class="col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td> Â  </td>
-                        <td> Â  </td>
-                        <td> Â  </td>
-                        <td><h5>Subtotal<br>Estimated shipping</h5><h3>Total</h3></td>
-                        <td class="text-right"><h5><strong>$24.59<br>$6.94</strong></h5><h3>$31.53</h3></td>
-                    </tr>
-                    <tr>
-                        <td> Â  </td>
-                        <td> Â  </td>
-                        <td> Â  </td>
-                        <td>
-                        <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                        </button></td>
-                        <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-</div>
+		<table id="cart" class="table table-hover table-condensed">
+	 		<thead>
+				<tr>
+					<th style="width:50%">Product</th>
+					<th style="width:10%">Price</th>
+					<th style="width:8%">Quantity</th>
+					<th style="width:22%" class="text-center">Subtotal</th>
+					<th style="width:10%"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-th="Product">
+						<div class="row">
+							<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+							<div class="col-sm-10">
+								<h4 class="nomargin">Product 1</h4>
+								<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+							</div>
+						</div>
+					</td>
+					<td data-th="Price">$1.99</td>
+					<td data-th="Quantity">
+						<input type="number" class="form-control text-center" value="1">
+					</td>
+					<td data-th="Subtotal" class="text-center">1.99</td>
+					<td class="actions" data-th="">
+						<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+						<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr class="visible-xs">
+					<td class="text-center"><strong>Total 1.99</strong></td>
+				</tr>
+				<tr>
+					<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+					<td colspan="2" class="hidden-xs"></td>
+					<td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+					<td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+    
+     
+   
+	
+	<!-- Footer -->
+    <footer class="footer-distributed">
+	<div class="footer-left">
+		<h3>Company<span>logo</span></h3>
+		<p class="footer-links">
+			<a href="home.html">Home</a>·
+			<a href="search.html">Search</a>·
+			<a href="popular.html">Popular</a>·
+			<a href="contact.html">Contact</a>·
+			<a href="aboutus.html">About Us</a>·
+			<a href="profile.html">Account</a>
+		</p>
+		<p class="footer-company-name">Books-R-Us &copy; 2017</p>
+	</div>
+
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>200 D.W. Brooks Drive </span> Athens, Georgia</p>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+1 555 123456</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:support@company.com">support@company.com</a></p>
+		</div>
+	</div>
+
+	<div class="footer-right">
+		<p class="footer-company-about">
+			<span>About the company</span>
+			Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+		</p>
+		<div class="footer-icons">
+
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a>
+		    <a href="#"><i class="fa fa-github"></i></a>
+		</div>
+	</div>
+</footer>
 
     </body>
 </html>

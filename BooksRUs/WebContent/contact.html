@@ -3,72 +3,145 @@
     <head>
       <title>General Bookstore</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" type="text/css" href="css/main2.css">
-         <link rel="stylesheet" type="text/css" href="css/footer.css">
-          <link rel="stylesheet" type="text/css" href="css/contact.css">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/main2.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-
-        
+	    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">	
     </head>
 
 
     <body>
-
-        <div class="mnav">
-            <ul>
-                <li class="home"><a href="home.html">HOME</a></li>
-                <li class="nav-search"><a href="search.html">SEARCH</a></li>
-                <li class="popular"><a href="popular.html">POPULAR</a></li>
-                <li class="contact"><a href="contact.html">CONTACT</a></li>
-                <li class="about-us"><a href="aboutus.html">ABOUT US</a></li>
-                
-                <div class="dropdown">
-                    <button class="dropbtn">ACCOUNT </button>
-                    <div class="dropdown-content">
-                        <a href="profile.html"> Profile</a>
-                        <hr style="margin:0px; border-color:#d8d8d8">
-                        <a href="login.html"> Log In</a>
-                        <a href="signup.html"> Sign Up</a>
-                    </div>
-                </div>                        
-                
-                <span> | </span>  
-                <li class="cart"><a href="cart.html">CART <span class="badge">2</span></a></li>
-            </ul>
-        </div>
- 
-        <div id="map" style="width:1000px;height:400px;background:yellow"></div>
-
-        <script>
-            function myMap() {
-                var mapOptions = {
-                    center: new google.maps.LatLng(33.9458486, -83.37466230000001),
-                    zoom: 15,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            }
-        </script>
-
-        <div class="contact-section"> 
-
-        </div>
+    	<!--header-->
+		<header id="header">
+			<div class="header_top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="contactinfo">
+								<ul class="nav nav-pills">
+									<li><a href=""><i class="fa fa-newspaper-o"></i> NEWS</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="social-icons pull-right"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="header-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8">
+							<div class="shop-menu pull-left">
+								<ul class="nav navbar-nav">
+									<li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+									<li><a href="search.html"><i class="fa fa-search"></i> Search</a></li>
+									<li><a href="popular.html"><i class="fa fa-star"></i> Popular</a></li>
+									<li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+									<li><a href="aboutus.html"><i class="fa fa-info-circle"></i> About Us</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="col-sm-4">
+							<div class="shop-menu pull-right">
+								<ul class="nav navbar-nav">
+									<li><a href="profile.html"><i class="fa fa-user"></i> Account</a></li>
+									<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+									<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	 
+	 <!-- Contact Section -->
+	 <div id="contact-page" class="container">
+    	<div class="bg">
+	    	<div class="row">    		
+	    		<div class="col-sm-12">    			   			   			    				    				
+					<div id="gmap" class="contact-map"></div>
+				</div>			 		
+			</div>    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+	    				<h2 class="title text-center">Get In Touch</h2>
+	    				<div class="status alert alert-success" style="display: none"></div>
+	    				
+	    				<!-- Form Section -->
+				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+				            <div class="form-group col-md-6">
+				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+				            </div>
+				            <div class="form-group col-md-6">
+				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
+				            </div>                        
+				            <div class="form-group col-md-12">
+				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+				            </div>
+				        </form>
+	    			</div>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<div class="contact-info">
+	    				<h2 class="title text-center">Contact Info</h2>
+	    				<address>
+	    					<p>Books-R-Us</p>
+							<p>200 D.W. Brooks Drive, Athens GA</p>
+							<p>Georgia USA </p>
+							<p>Mobile: +555 12 34 56</p>
+							<p>Fax: 1-555-12-3456</p>
+							<p>Email: info@books-r-us.com</p>
+	    				</address>
+	    				<div class="social-networks">
+	    					<h2 class="title text-center">Social Networking</h2>
+							<ul>
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-linkedin"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-github"></i></a>
+								</li>
+							</ul>
+	    				</div>
+	    			</div>
+    			</div>    			
+	    	</div>  
+    	</div>	
+    	</div>
 
         <!-- Footer -->
         <footer class="footer-distributed">
 			<div class="footer-left">
 				<h3>Company<span>logo</span></h3>
 				<p class="footer-links">
-					<a href="home.html">Home</a> Â·
-					<a href="search.html">Search</a> Â·
-					<a href="popular.html">Popular</a> Â·
-					<a href="contact.html">Contact</a> Â·
-					<a href="aboutus.html">About Us</a> Â·
+					<a href="home.html">Home</a>·
+					<a href="search.html">Search</a>·
+					<a href="popular.html">Popular</a>·
+					<a href="contact.html">Contact</a>·
+					<a href="aboutus.html">About Us</a>·
 					<a href="profile.html">Account</a>
 				</p>
 				<p class="footer-company-name">Books-R-Us &copy; 2017</p>
@@ -103,9 +176,25 @@
 				</div>
 			</div>
 		</footer>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyDFv6ETLlR2ljYw-_GV5zgsVCLftmhHlUM&callback=myMap"></script>
-
+		
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdxzIFHWgjvVUbM8EdIH6CGfgGh-CMlIw&callback=initMap"></script>
+        <script>
+            function initialize() {
+              var mapOptions = {
+                zoom: 15,
+                scrollwheel: false,
+                center: new google.maps.LatLng(33.945849, -83.374662)
+              };
+              var map = new google.maps.Map(document.getElementById('gmap'),
+                  mapOptions);
+              var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                map: map
+              });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>  
+       
 
     </body>
 </html>
