@@ -65,13 +65,28 @@ public class Servlet extends HttpServlet {
 			DefaultObjectWrapperBuilder df = new DefaultObjectWrapperBuilder(Configuration.VERSION_2_3_25);
 			SimpleHash root = new SimpleHash(df.build());
 			
-			// The following Strings are used to check for a null value.
+			// The following Strings are used to check for a null value. Whichever string that does not have a null value is the action the client wants to perform
 			String register = request.getParameter("register"); // sign up page's "Register" button
+			String login = request.getParameter("login"); // login page's "Login" button
+
+			
+			
+			String addToCart = request.getParameter("");
+			String removeFromCart = request.getParameter("");
+			String editProfileInfo = request.getParameter("");
+			String deleteAccount = request.getParameter("");
+			String enterPromo = request.getParameter("");
+			String order = request.getParameter("");
+
+			//vendors and admin operations below
+			String addBook = request.getParameter("");
+			String removeBook = request.getParameter("");
+			String getSalesReport = request.getParameter("");
+			String get = request.getParameter("");
 			
 			
 			
-			String signUp = request.getParameter("sign up"); // home page "Sign up" button
-			String login = request.getParameter("login"); // signIn.ftl "Login" button
+			
 			String about = request.getParameter("about"); // home page "About Us" button
 			String leaseMyApartment = request.getParameter("leaseMyApartment"); // home page "Lease your apartment" button
 			String checkMessages = request.getParameter("checkMessages"); // home page "Inbox" button
@@ -80,7 +95,7 @@ public class Servlet extends HttpServlet {
 
 
 			//begin checks to see what the input is
-			if (register!= null){ // check to see if user clicked the register button on signUp.ftl
+			if (register!= null){ // check to see if user clicked the register button on the sign up page
 				String email = request.getParameter("email");
 				String username = request.getParameter("username");
 				String password = request.getParameter("password");
@@ -88,8 +103,34 @@ public class Servlet extends HttpServlet {
 				String lname = request.getParameter("lname");
 				
 				User user = new User(fname, lname, email, username, password, 2);
-				UserLogicImpl shit = new UserLogicImpl();
-				shit.insertUser(user);
+				UserLogicImpl newUser = new UserLogicImpl();
+				int r = newUser.insertUser(user);
+				
+				if (r == 0){
+					templateName = "signup.ftl"; //error inserting the new user into the database.
+					root.put("registerError","yes");
+
+				} else{
+					root.put("registerSuccessful","yes");
+					templateName = "login.ftl";
+				}
+				
+				templateName = "login.ftl";
+				
+			} else if (login != null){
+				String username = request.getParameter("username");
+				String password = request.getParameter("password");
+
+				UserLogicImpl existingUser = new UserLogicImpl();
+				boolean authenticUser = existingUser.authenticateUser(username, password);
+				
+				if(authenticUser == false){ //enter here if authentification fails
+					templateName = "login.ftl"; 
+					root.put("failedLogin"," yes");
+				} else{
+					templateName = "home.ftl";
+				}
+				
 			}
 				
 
