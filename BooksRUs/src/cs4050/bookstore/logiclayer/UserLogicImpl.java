@@ -14,12 +14,12 @@ import PersistLayer.*;
 public class UserLogicImpl {
 	private UserPersistImpl userPersist = new UserPersistImpl();
 	
-	public void insertUser(String email, String username, String password, int seclevel, String fname, String lname){
-		userPersist.insertUser(fname, lname, email, username, password, seclevel);
+	public void insertUser(String email, String username, String password, int type, String fname, String lname){
+		userPersist.insertUser(fname, lname, email, username, password, type);
 	}
 	
-	public void insertUser(User u){
-		userPersist.insertUser(u);
+	public int insertUser(User u){
+		return userPersist.insertUser(u);
 	}
 	
 	public void deleteUser(int id){
