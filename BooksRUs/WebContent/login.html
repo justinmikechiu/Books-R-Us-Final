@@ -77,38 +77,41 @@
         					<h3> Log In<br> Buy Books</h3>
         				</header>
         			</div>
-        				
-        			<!-- Right side -->
-        			<div class="col-md-6 right-side">
-        				
-        				<span class = "input input--hoshi">
-        					<input class="input__field input__field--hoshi" type="text" id="username">
-        					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="username">
-        						<span class="input__label-content input__label-content--hoshi"> Username</span>
-        					</label>
-        				</span>
-   
-        				<span class = "input input--hoshi">
-        					<input class="input__field input__field--hoshi" type="password" id="password">
-        					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password">
-        						<span class="input__label-content input__label-content--hoshi"> Password</span>
-        					</label>
-        				</span>     				
-        				
-        				<div class="cta">
-        					<button class="btn btn-primary pull-left"> Sign In</button>
-        					<span>
-        						<a href="register.html"> I am not a member</a>
-        					</span>
-        				</div>
-        				
-        				<ul class="social list-inline">
-        					<li><a href="#">Facebook</a></li>
-        					<li><a href="#">Twitter</a></li>
-        					<li><a href="#">Linkedin</a></li>
-        				</ul>        				   				
-        				
-        			</div>      			
+        			
+        			<form id="" class="" name="contact-form" method="post" action="Servlet">
+        			        			
+	        			<!-- Right side -->
+	        			<div class="col-md-6 right-side">
+	        				
+	        				<span class = "input input--hoshi">
+	        					<input class="input__field input__field--hoshi" type="text" name="username" id="username">
+	        					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="username">
+	        						<span class="input__label-content input__label-content--hoshi"> Username</span>
+	        					</label>
+	        				</span>
+	   
+	        				<span class = "input input--hoshi">
+	        					<input class="input__field input__field--hoshi" type="password" name="password" id="password">
+	        					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password">
+	        						<span class="input__label-content input__label-content--hoshi"> Password</span>
+	        					</label>
+	        				</span>     				
+	        				
+	        				<div class="cta">
+	        					<button name="login" type="submit" class="btn btn-primary pull-left"> Sign In</button>
+	        					<span>
+	        						<a href="register.html"> I am not a member</a>
+	        					</span>
+	        				</div>
+	        				
+	        				<ul class="social list-inline">
+	        					<li><a href="#">Facebook</a></li>
+	        					<li><a href="#">Twitter</a></li>
+	        					<li><a href="#">Linkedin</a></li>
+	        				</ul>        				   				
+	        				
+	        			</div>  
+        			</form>    			
         		 </div>
         	</div>       
         </div> <!-- end #main-wrapper -->
